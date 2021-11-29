@@ -1,0 +1,151 @@
+{
+  "Print to console": {
+    "prefix": "cl",
+    "body": [
+      "console.log('$1');",
+    ],
+    "description": "Log output to console this is a example snippet"
+  },
+
+  "Create Page ": {
+    "prefix": "np",
+    "body": [
+        "import React from 'react';",
+        "import Header from 'next/head';",
+        "import { GetServerSideProps, GetServerSidePropsContext, NextPage } from 'next';",
+        "",
+        "type ${1:PageName}Props = {",
+        "  page_name: string;",
+        "}",
+        "",
+        "export const getServerSideProps : GetServerSideProps<${1:PageName}Props> = async (ctx : GetServerSidePropsContext) => {",
+        "  return {",
+        "    props: {",
+        "      page_name : '${1:PageName} Example Page'",
+        "    }",
+        "  }",
+        "}",
+        "",
+        "const ${1:PageName}: NextPage<${1:PageName}Props> = (props) => {",
+        "  return (",
+        "    <>",
+        "      <Header>",
+        "        <title>{ props.page_name }</title>",
+        "      </Header>",
+        "",
+        "      ${2:<h1>{ props.page_name \\}</h1>}",
+        "",
+        "    </>",
+        "  );",
+        "}",
+        "",
+        "export default ${1:PageName};",
+        ""
+    ],
+    "description": "Create new next page in this project"
+  },
+
+  "Create API": {
+    "prefix": "na",
+    "body": [
+        "import type { NextApiHandler } from 'next';",
+        "",
+        "type ${1:Hello}ResponseData = {",
+        "  name: string",
+        "}",
+        "",
+        "const ${1:Hello}API : NextApiHandler<${1:Hello}ResponseData> = (req, res) => {",
+        "  res.status(200).json({ name: 'Hello world!' })",
+        "}",
+        "",
+        "export default ${1:Hello}API;"
+    ],
+    "description": "Snippet for create API in this project"
+  },
+
+  "Create new component": {
+    "description": "Snippet for quick create an example component in this project",
+    "prefix": "nc",
+    "body": [
+        "import { FunctionComponent } from \"react\";",
+        "",
+        "interface ${1:Hello}ComponentProps {",
+        "  name: string",
+        "  className: string",
+        "}",
+        "",
+        "const ${1:Hello}Component :  FunctionComponent<${1:Hello}ComponentProps> = (props) => {",
+        "  return (",
+        "    ${2:<h1 className={props.className\\} >Hello { props.name \\}</h1>}",
+        "  )",
+        "}",
+        "",
+        "${1:Hello}Component.defaultProps = {",
+        "  name : 'world'",
+        "}",
+        "",
+        "export default ${1:Hello}Component;"
+    ],
+  },
+
+  "API with middleware": {
+    "prefix": "nam",
+    "body": [
+        "import type { NextApiRequest, NextApiResponse } from 'next';",
+        "import ApiMiddleware from '../../middlewares/api';",
+        "",
+        "type ResponseData = {",
+        "  name: string",
+        "}",
+        "",
+        "export default async (req: NextApiRequest, res: NextApiResponse<ResponseData>) => {",
+        "  await ApiMiddleware(req, res);",
+        "  res.status(200).json({ name: 'John Doe' })",
+        "}"
+    ],
+    "description": "Create API with middleware snippet"
+  },
+  "Create page with middleware": {
+    "prefix": "npm",
+    "body": [
+        "import React from 'react';",
+        "import Header from 'next/head';",
+        "import { GetServerSidePropsContext, NextPage } from 'next';",
+        "import PageMiddleware from '../middlewares/page/index';",
+        "",
+        "type ${1:PageName}PageProps = {",
+        "  page_name: string;",
+        "  [key: string]: any;",
+        "}",
+        "",
+        "export const getServerSideProps = async (ctx : GetServerSidePropsContext) => {",
+        "  const middleware = await PageMiddleware(ctx);",
+        "",
+        "  return {",
+        "    ...middleware,",
+        "    props: {",
+        "      ...middleware.props,",
+        "      page_name : 'Admin Home Page Example Page',",
+        "    }",
+        "  }",
+        "}",
+        "",
+        "const ${1:PageName}Page: NextPage<${1:PageName}PageProps> = (props) => {",
+        "  return (",
+        "    <>",
+        "      <Header>",
+        "        <title>{ props.page_name }</title>",
+        "      </Header>",
+        "",
+        "      $2",
+        "",
+        "    </>",
+        "  );",
+        "}",
+        "",
+        "export default ${1:PageName}Page;",
+        ""
+    ],
+    "description": "Create next page use middleware"
+  }
+}
