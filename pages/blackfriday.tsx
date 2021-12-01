@@ -19,7 +19,7 @@ const BlackFridayPage = () => (
                             </button>
                             <div className="absolute flex bottom-8 right-8 md:bottom-5 md:right-5">
                                 <a
-                                    href
+                                    href=""
                                     className="flex items-center justify-center w-6 h-6 bg-white rounded-md"
                                 >
                                     <svg
