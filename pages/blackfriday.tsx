@@ -39,7 +39,7 @@ const BlackFridayPage = () => (
                                     </svg>
                                 </a>
                                 <a
-                                    href
+                                    href=""
                                     className="ml-1.5 h-6 w-6 flex items-center justify-center rounded-md bg-yellow-400"
                                 >
                                     <svg
@@ -83,7 +83,7 @@ const BlackFridayPage = () => (
                     <div className="relative flex items-end font-bold">
                         <h2 className="text-2xl">Browse by Category</h2>
                         <a
-                            href
+                            href=""
                             className="flex items-center ml-10 text-gray-400"
                         >
                             <span className="text-sm">All Categories</span>
@@ -105,7 +105,7 @@ const BlackFridayPage = () => (
                         </a>
                         <div className="flex ml-auto">
                             <a
-                                href
+                                href=""
                                 className="flex items-center justify-center w-6 h-6 bg-gray-100 rounded-md"
                             >
                                 <svg
@@ -125,7 +125,7 @@ const BlackFridayPage = () => (
                                 </svg>
                             </a>
                             <a
-                                href
+                                href=""
                                 className="ml-1.5 h-6 w-6 flex items-center justify-center rounded-md bg-yellow-400"
                             >
                                 <svg
@@ -195,7 +195,7 @@ const BlackFridayPage = () => (
                     <div className="relative flex items-end font-bold">
                         <h2 className="text-2xl">Featured Brands</h2>
                         <a
-                            href
+                            href=""
                             className="flex items-center ml-10 text-gray-400"
                         >
                             <span className="text-sm">All Offers</span>
@@ -217,7 +217,7 @@ const BlackFridayPage = () => (
                         </a>
                         <div className="flex ml-auto">
                             <a
-                                href
+                                href=""
                                 className="flex items-center justify-center w-6 h-6 bg-gray-100 rounded-md"
                             >
                                 <svg
